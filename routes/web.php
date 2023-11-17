@@ -25,3 +25,8 @@ Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/games/create',[GameController::class,'create'])->name('game.create');
 
 Route::post('/games/store',[GameController::class,'store'])->name('game.store');
+
+//!rotta per la visualizzazione del catalogo dei giochi 
+
+Route::get('/games/index',[GameController::class,'index'])->name('game.index');
+

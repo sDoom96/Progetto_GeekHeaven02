@@ -12,7 +12,10 @@ class GameController extends Controller
      */
     public function index()
     {
-        
+
+        $games = Game::all();
+        return view('game.index',compact('games'));
+
     }
 
     /**
@@ -33,10 +36,11 @@ class GameController extends Controller
         Game::create([
             'title'=> $request->title,
             'year'=> $request->year,
-            'developeHouse'=> $request->developeHouse,
+            'develope'=> $request->develope,
             'description'=> $request->description,
             'img'=> $file ? $file->store('public/images') : 'public/images/default.png'
         ]);
+        return redirect()->route('game.create')->with('success','gioco inserito con successo');
     }
 
     /**
