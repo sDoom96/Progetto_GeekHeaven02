@@ -19,10 +19,9 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/',[PublicController::class,'home'])->name('home');
 
-//! rotte per la creazione dei giochi 
+//! rotte per la creazione dei giochi
 //?CREATE e POST
 
 Route::get('/games/create',[GameController::class,'create'])->name('game.create');
 
 Route::post('/games/store',[GameController::class,'store'])->name('game.store');
-

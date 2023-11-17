@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\Category;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -17,13 +18,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-//! cambiare le vategorie in basso
+//! cambiare le categorie in basso
 
-        $categories = ['Aberrazione','Bestia','Clestiale','Costrutto','Drago','Elementale','Fatato','Gigante','Immondo','Melma','Mostruosità','Non morto','Pianta','Umanoide'];
+        $categories = ['FPS','RPG','JRPG','Avventura','OpenWord','Racing','Sport','Arcade','Indie','Action','Simulator','Horror','Survival','Party'];
         foreach ($categories as $category) {
             Category::create([
                 'name' => $category,
-            ]);  
+            ]);
         }
     }
 
