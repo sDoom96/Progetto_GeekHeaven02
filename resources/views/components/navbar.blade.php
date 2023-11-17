@@ -28,9 +28,9 @@
                 </li>
             </ul>
             {{-- <a  href="{{route('game.create')}}"> --}}
-                <button type="button" class="fs-2 search btn btn-warning">
+                <button type="button" class="fs-2 search btn bg-o">
                     <div class=" d-flex justify-content-center align-items-center">
-                        <i class="search-icon{{-- fa-2xs --}} fa-solid fa-magnifying-glass" style="color: #840032;"></i>
+                        <i class="search-icon fa-2xs fa-solid fa-magnifying-glass" style="color: #000814;"></i>
                     </div>
                 </button>
             {{-- </a> --}}
