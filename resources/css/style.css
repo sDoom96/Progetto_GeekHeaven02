@@ -1,0 +1,59 @@
+:root{
+
+--b: #002642;
+--r: #840032;
+
+--gradient1: linear-gradient(90deg, rgba(0,38,66,1) 0%, rgba(132,0,50,1) 100%);
+--gradient2: linear-gradient(90deg, rgba(132,0,50,1) 0%, rgba(0,38,66,1) 100%);
+}
+
+.bg-b{
+    background-color: var(--b) !important;
+}
+
+.bg-r{
+    background-color: var(--r) !important;
+}
+
+.navbar-scroll{
+    background:var(--gradient1);
+}
+.navbar{
+    transition: 0.5s;
+}
+.navbar-rounded{
+    margin: 60px 150px;
+    height: 100px;
+    border-radius: 50px;
+    background:var(--gradient2);
+
+}
+
+.navbar-rounded .search{
+    height: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+
+.navbar-scroll .search{
+    height: 50px;
+    margin: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.logo-custom{
+    height: 40px;
+    width: 125px;
+}
+
+.navbar-rounded .search-icon{
+    font-size: 40px !important;
+    transition: 0.2s;
+}
+.navbar-scroll .search-icon{
+    font-size: 20px !important;
+    transition: 0.2s;
+
+    
+}
