@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -23,7 +24,8 @@ class GameController extends Controller
      */
     public function create()
     {
-        return view('game.create');
+        $categories = Category::all();
+        return view('game.create', compact('categories'));
     }
 
     /**
@@ -32,13 +34,15 @@ class GameController extends Controller
     public function store(Request $request)
     {
         $file = $request->file('img');
-        
+
         Game::create([
             'title'=> $request->title,
             'year'=> $request->year,
             'develope'=> $request->develope,
             'description'=> $request->description,
-            'img'=> $file ? $file->store('public/images') : 'public/images/default.png'
+
+            'img'=> $file ? $file->store('public/images') : 'public/images/default.png',
+            'category_id'=> $request->category_id,
         ]);
         return redirect()->route('game.create')->with('success','gioco inserito con successo');
     }

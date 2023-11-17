@@ -17,8 +17,9 @@ return new class extends Migration
             $table->integer('year');
             $table->string('develope');
             $table->text('description');
-
+            //tabella dell'id delle categorie giá creata porco il dio della madonna puttana
             $table->unsignedBigInteger('category_id');
+
             $table->foreign('category_id')->references('id')->on('categories');
 
             $table->timestamps();
@@ -33,4 +34,3 @@ return new class extends Migration
         Schema::dropIfExists('games');
     }
 };
-
