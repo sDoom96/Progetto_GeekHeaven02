@@ -10,17 +10,17 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li> --}}
                 <li class="nav-item p-3">
-                    <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-pc-64.png" alt="">Pc</a>
+                    <a class="nav-link p-2" href="#"><img class="me-1 icon-custom" src="/media/images/icon/icons8-pc-64.png" alt="">Pc</a>
                 </li>
                 
                 <li class="nav-item p-3">
-                    <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-playstation-50.png" alt="">Playstation</a>
+                    <a class="nav-link p-2" href="#"><img class=" me-2 icon-custom" src="/media/images/icon/icons8-playstation-50.png" alt="">Playstation</a>
                 </li>
                 <li class="nav-item p-3">
-                    <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-xbox-50.png" alt="">Xbox</a>
+                    <a class="nav-link p-2" href="#"><img class="me-2 icon-custom" src="/media/images/icon/icons8-xbox-50.png" alt="">Xbox</a>
                 </li>
                 <li class="nav-item p-3">
-                    <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-nintendo-switch-logo-50.png" alt="">Nintendo</a>
+                    <a class="nav-link p-2" href="#"><img class="me-2 icon-custom" src="/media/images/icon/icons8-nintendo-switch-logo-50.png" alt="">Nintendo</a>
                 </li>
             </ul>
             {{-- <a  href="{{route('game.create')}}"> --}}

@@ -1,7 +1,7 @@
 <x-layout>
     <header class="">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner position-relative">
                 <div class="carousel-item active">
                     <img src="/media/images/mario.bros.jpeg" class="d-block w-100" alt="...">
                 </div>
@@ -19,10 +19,14 @@
             </div>
         </div>
     </header>
+    <div class="container-fluid background-custom">
+
+    </div>
+
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
             @foreach($games as $game)
-            <div class="d-flex flex-column justify-content-between align-items-start mt-5 pt-5 col-4">
+            <div class="d-flex flex-column justify-content-center {{-- align-items-start --}} mt-5 pt-5 col-4">
                 <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
                     <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top" alt="...">
                     
@@ -34,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="col-4">
                     <a href="#" class="m-3 btn btn-primary">Leggi</a>
                 </div>
             </div>

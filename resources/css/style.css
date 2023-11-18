@@ -92,6 +92,9 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     background: url(/media/images/background1.png) !important;
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    z-index: 9999 !important;
+    height: 100px !important;
 }
 
 .form-custom{
