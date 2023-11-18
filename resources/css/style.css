@@ -1,3 +1,8 @@
+
+body{
+    background-color: var(--d);
+}
+
 :root{
 
 --b: #002642;
@@ -27,6 +32,18 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
 }
 .bg-o{
     background-color: var(--o) !important;
+}
+
+.border-r{
+    border-color: var(--r);
+}
+
+.border-o{
+    border-color: var(--o);
+}
+
+.border-gradient{
+    border-color: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important;
 }
 
 .navbar-scroll{
@@ -83,4 +100,8 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
 .header-gradient{
     background: linear-gradient(180deg, rgba(0,8,20,1) 20%, rgba(0,38,66,0) 100%) !important;
     
+}
+
+.fs-xs{
+    font-size: 12px !important;
 }

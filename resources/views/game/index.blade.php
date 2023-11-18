@@ -10,28 +10,35 @@
                 </div>
                 <div class="carousel-item">
                     <img src="/media/images/modern warfare III.jpeg" class="d-block w-100" alt="...">
+                    
                 </div>
+                <div class="background-custom" >
+                    <div class="vh-100"></div>
+                    </div>
                 
             </div>
         </div>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             @foreach($games as $game)
-            <div class=" mt-5 pt-5 col-12">
-                <div class="card" style="width: 30rem;">
+            <div class=" justify-content-between align-items-center mt-5 pt-5 col-12">
+                <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
                     
                     <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top" alt="...">
                     
-                    <div class="rounded-bottom-4 bg-gradient card-body">
-                        <div class="d-flex justify-content-around align-items-center col-12">
-                        <h5 class="card-title">{{$game->title}}</h5>
-                        <p class="card-text">{{$game->year}}</p>
-                        <p class="card-text">{{$game->category->name}}</p>
-                        <a href="#" class="btn btn-primary">Leggi</a>
-                    </div>
+                    <div class="p-0 rounded-bottom-4 bg-gradient card-body">
+                        <div class="d-flex justify-content-between align-items-center col-12">
+                        <h5 class=" fs-5 ms-5 m-4 card-title">{{$game->title}}</h5>
+                        <p class=" m-4 fs-xs card-text">{{$game->year}}</p>
+                        <p class="m-5 fs-xs card-text">{{$game->category->name}}</p>
+                        
                     </div>
                     
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="m-3 btn btn-primary">Leggi</a>
                 </div>
             </div>
             @endforeach
