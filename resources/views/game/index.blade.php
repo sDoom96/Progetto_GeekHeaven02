@@ -20,11 +20,10 @@
         </div>
     </header>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
             @foreach($games as $game)
-            <div class=" justify-content-between align-items-center mt-5 pt-5 col-12">
+            <div class="d-flex flex-column justify-content-between align-items-start mt-5 pt-5 col-4">
                 <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
-                    
                     <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top" alt="...">
                     
                     <div class="p-0 rounded-bottom-4 bg-gradient card-body">
@@ -32,9 +31,7 @@
                         <h5 class=" fs-5 ms-5 m-4 card-title">{{$game->title}}</h5>
                         <p class=" m-4 fs-xs card-text">{{$game->year}}</p>
                         <p class="m-5 fs-xs card-text">{{$game->category->name}}</p>
-                        
-                    </div>
-                    
+                        </div>
                     </div>
                 </div>
                 <div>
