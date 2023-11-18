@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GameController extends Controller
 {
@@ -52,7 +53,7 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        return view ('game.show', compact('game'));
     }
 
     /**
@@ -60,7 +61,8 @@ class GameController extends Controller
      */
     public function edit(Game $game)
     {
-        //
+        $categories = Category::all();
+        return view ('game.edit', compact('game', 'categories'));
     }
 
     /**
@@ -68,7 +70,19 @@ class GameController extends Controller
      */
     public function update(Request $request, Game $game)
     {
-        //
+        $file = $request->file('img');
+        $game->update([
+            'year'=> $request->year,
+            'develope'=> $request->develope,
+            'description'=> $request->description,
+            'category_id'=> $request->category_id,
+        ]);
+        if ($file){
+            Storage::delete($game->img);
+            $game->img = $file->store('/public/image');
+            $game->save();
+        }
+        return redirect()-> route("game.index", compact('game'))->with('success', ' il gioco è aggionrato con successo');
     }
 
     /**
@@ -76,6 +90,8 @@ class GameController extends Controller
      */
     public function destroy(Game $game)
     {
-        //
+        $game -> delete();
+        Storage::delete($game->img);
+        return redirect()-> route("game.index");
     }
 }
