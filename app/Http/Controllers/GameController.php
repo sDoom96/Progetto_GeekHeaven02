@@ -72,6 +72,7 @@ class GameController extends Controller
     {
         $file = $request->file('img');
         $game->update([
+            'title'=>$request->title,
             'year'=> $request->year,
             'develope'=> $request->develope,
             'description'=> $request->description,
