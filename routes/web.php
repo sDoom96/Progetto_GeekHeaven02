@@ -26,7 +26,17 @@ Route::get('/games/create',[GameController::class,'create'])->name('game.create'
 
 Route::post('/games/store',[GameController::class,'store'])->name('game.store');
 
-//!rotta per la visualizzazione del catalogo dei giochi 
+//!rotta per la visualizzazione del catalogo dei giochi
 
 Route::get('/games/index',[GameController::class,'index'])->name('game.index');
 
+//! Rotta per la Pagina al dettaglio
+Route::get('/games/show/{game}',[GameController::class, 'show'])->name('game.show');
+
+//! Rotte per la modifica dei giochi
+Route::get('/games/edit/{game}',[GameController::class, 'edit'])->name('game.edit');
+Route::put('/games/update/{game}',[GameController::class, 'update'])->name('game.update');
+
+//! Rotta per l'eliminazione dei giochi
+
+Route::delete('/games/delete/{game}',[GameController::class, 'destroy'])->name('game.destroy');

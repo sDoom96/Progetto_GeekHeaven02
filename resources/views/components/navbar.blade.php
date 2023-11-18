@@ -12,7 +12,7 @@
                 <li class="nav-item p-3">
                     <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-pc-64.png" alt="">Pc</a>
                 </li>
-                
+
                 <li class="nav-item p-3">
                     <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-playstation-50.png" alt="">Playstation</a>
                 </li>
@@ -23,13 +23,19 @@
                     <a class="nav-link p-2" href="#"><img class="icon-custom" src="/media/images/icon/icons8-nintendo-switch-logo-50.png" alt="">Nintendo</a>
                 </li>
             </ul>
-            {{-- <a  href="{{route('game.create')}}"> --}}
+            <a href="{{route('game.index')}}">
+                <button class="btn btn-dark">Visualizza Catalogo</button>
+            </a>
+            <a href="{{route('game.create')}}">
+                <button class="btn btn-dark">Crea Gioco</button>
+            </a>
+
                 <button type="button" class="fs-2 search btn bg-o">
                     <div class=" d-flex justify-content-center align-items-center">
                         <i class="search-icon fa-2xs fa-solid fa-magnifying-glass" style="color: #f1faee;"></i>
                     </div>
                 </button>
-                {{-- </a> --}}
+
             </div>
         </div>
     </nav>
