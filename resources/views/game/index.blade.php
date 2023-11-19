@@ -4,7 +4,6 @@
             <div class="carousel-inner position-relative">
                 <div class="carousel-item active">
                     <img src="/media/images/mario.bros.jpeg" class="d-block w-100" alt="...">
-                    <video src="/media/video/Marvel’s Spider-Man_ Miles Morales – Be Yourself TV Commercial _ PS5, PS4 (1).mp4" class="object-fit-contain" autoplay></video>
                 </div>
                 <div class="carousel-item">
                     <img src="/media/images/cyberpunk_2077_2020_game_4k_8k-1920x1080.jpeg" class="d-block w-100" alt="...">
@@ -13,7 +12,7 @@
                     <img src="/media/images/modern warfare III.jpeg" class="d-block w-100" alt="...">
 
                 </div>
-                <div class="background-custom" >
+                <div class="" >
                     <div class="vh-100"></div>
                     </div>
 
@@ -30,7 +29,8 @@
             @foreach($games as $game)
             <div class="d-flex flex-column align-items-center justify-content-center {{-- align-items-start --}} mt-5 pt-5 col-4">
                 <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
-                    <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top" alt="...">
+                    <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top"
+                    alt="...">
 
                     <div class="p-0 rounded-bottom-4 bg-gradient card-body">
                         <div class="d-flex justify-content-between align-items-center col-12">
@@ -55,8 +55,7 @@
             @endforeach
         </div>
     </div>
-    <div class="video-container">
-        <iframe src="/media/video/Marvel’s Spider-Man_ Miles Morales – Be Yourself TV Commercial _ PS5, PS4 (1).mp4">
+    
         
         </iframe>
     </div>

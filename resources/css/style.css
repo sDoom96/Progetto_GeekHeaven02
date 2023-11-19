@@ -88,21 +88,32 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     transition: 0.2s;
 }
 
-.background-custom{
-    background: url(/media/images/background1.png) !important;
+.background-home{
+    background: url(/media/images/background2.png);
+    background-repeat: no-repeat;
+    
+    /* height: 1000px;
+    width: 1900.67px;
+    top: 120px;
+    z-index: 9999; */
+}
+/* .background-custom{
+    background: url(/media/images/background2.png) !important;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+    top: 300px;
     z-index: 9999 !important;
-    height: 100px !important;
-}
+    height: 600px !important;
+} */
 
 .form-custom{
     margin-top: 200px;
 }
 
 .carousel-gradient{
-    background: linear-gradient(180deg, rgba(0,8,20,1) 0%, rgba(0,27,49,0) 50%, rgba(0,8,20,1) 100%);
+    
+    background-color: linear-gradient(180deg, rgba(0,8,20,1) 0%, rgba(0,27,49,0) 50%, rgba(0,8,20,1) 100%);
 }
 
 .fs-xs{
@@ -113,5 +124,6 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     height: 30px;
     width: 30px;
 }
+
 
 
