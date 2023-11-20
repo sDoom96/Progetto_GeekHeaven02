@@ -18,26 +18,38 @@
                         <label for="title" class="fs-3 form-label">
                             Titolo
                         </label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
                     </div>
+                    @error('title')
+                        <p class="text-danger">{{$message}}</p>
+                    @enderror
 
                     <div class="mb-3">
                         <label for="year" class="fs-4 form-label">
                             Anno
                         </label>
-                        <input type="number" class="form-control" id="year" name="year">
+                        <input type="number" class="form-control" id="year" name="year" value="{{old('year')}}">
+                        @error('title')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
 
                     <div class="mb-3">
                         <label for="develope" class="fs-4 form-label">
                             Casa di Sviluppo
                         </label>
-                        <input type="text" class="form-control" id="develope" name="develope">
+                        <input type="text" class="form-control" id="develope" name="develope" value="{{old('develope')}}">
+                        @error('title')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
 
                     <div class="mb-3">
                         <label for="description" class="fs-4">Descrizione</label>
-                        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10">{{old('description')}}</textarea>
+                        @error('title')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="mb-3 form-check">
                         <label for="category_id" class="form-label text-center">Categoria</label>

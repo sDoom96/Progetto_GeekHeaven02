@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Requests\GameRequest;
 use Illuminate\Support\Facades\Storage;
 
 class GameController extends Controller
@@ -32,7 +33,7 @@ class GameController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(GameRequest $request)
     {
         $file = $request->file('img');
 
@@ -68,7 +69,7 @@ class GameController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Game $game)
+    public function update(GameRequest $request, Game $game)
     {
         $file = $request->file('img');
         $game->update([
