@@ -88,24 +88,26 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     transition: 0.2s;
 }
 
-.background-home{
-    background: url(/media/images/background2.png);
-    background-repeat: no-repeat;
-    
-    /* height: 1000px;
-    width: 1900.67px;
-    top: 120px;
-    z-index: 9999; */
+.carousel-size{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
 }
-/* .background-custom{
-    background: url(/media/images/background2.png) !important;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.row-custom{
+    position: relative;
+}
+
+.background-home{
+    height: 1920px;
+    width: 1080px;
     position: absolute;
-    top: 300px;
-    z-index: 9999 !important;
-    height: 600px !important;
-} */
+    right: 800px;
+    top: 700px;
+    display: flex;
+}
 
 .form-custom{
     margin-top: 200px;
@@ -125,5 +127,7 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     width: 30px;
 }
 
-
+.margin-custom{
+    margin-top: 250px;
+}
 

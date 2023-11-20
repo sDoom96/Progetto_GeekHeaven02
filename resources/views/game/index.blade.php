@@ -2,13 +2,13 @@
     <header class="">
         <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-inner position-relative">
-                <div class="carousel-item active">
+                <div class="carousel-item active carousel-size">
                     <img src="/media/images/mario.bros.jpeg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item carousel-size">
                     <img src="/media/images/cyberpunk_2077_2020_game_4k_8k-1920x1080.jpeg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item carousel-size">
                     <img src="/media/images/modern warfare III.jpeg" class="d-block w-100" alt="...">
 
                 </div>
