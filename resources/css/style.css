@@ -130,3 +130,26 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     margin-top: 250px;
 }
 
+
+/* .img-card-container{
+    position: relative;
+}
+
+
+.prova{
+    position: absolute;
+    width: 478.89px;
+    height: 223.83px;
+    background-color: transparent;
+    top: 0px;
+    left: 0px;
+}
+
+.prova:hover{
+    position: absolute;
+    width: 478.89px;
+    height: 223.83px;
+    background-image: url(/public/media/images/spider_man2.gif) ;
+    top: 0px;
+    left: 0px;
+} */

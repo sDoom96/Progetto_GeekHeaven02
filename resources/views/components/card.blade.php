@@ -1,7 +1,10 @@
 <div class="d-flex flex-column align-items-center justify-content-center {{-- align-items-start --}} mt-5 pt-5 col-4">
     <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
-        <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top"
+        <div class="img-card-container">
+            {{-- <div class="prova"></div> --}}
+        <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top "
         alt="...">
+        </div>
 
         <div class="p-0 rounded-bottom-4 bg-gradient card-body">
             <div class="d-flex justify-content-between align-items-center col-12">
