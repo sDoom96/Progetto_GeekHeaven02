@@ -96,9 +96,9 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     display: flex;
 } */
 
-/* .row-custom{
+.row-custom{
     position: relative;
-} */
+}
 
 .background-home{
     height: 1920px;
@@ -113,7 +113,7 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
 }
 
 .carousel-gradient{
-
+    
     background-color: linear-gradient(180deg, rgba(0,8,20,1) 0%, rgba(0,27,49,0) 50%, rgba(0,8,20,1) 100%);
 }
 
@@ -130,6 +130,3 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     margin-top: 250px;
 }
 
-.loginCustom{
-    margin-top: 200px;
-}
