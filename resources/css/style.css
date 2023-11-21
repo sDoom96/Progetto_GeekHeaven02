@@ -131,7 +131,7 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
 }
 
 
-/* .img-card-container{
+.img-card-container{
     position: relative;
 }
 
@@ -145,7 +145,7 @@ background: linear-gradient(90deg, #000814 0%, rgba(132,0,50,1) 100%) !important
     left: 0px;
 }
 
-.prova:hover{
+/* .prova:hover{
     position: absolute;
     width: 478.89px;
     height: 223.83px;

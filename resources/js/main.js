@@ -1,6 +1,14 @@
 let navbar = document.querySelector('nav');
+let divGif = document.querySelectorAll('.div-gif')
 
+divGif.forEach(el => {
+    let gif = el.getAttribute('data-gif');
+    el.addEventListener('hover',()=>{
+        el.style.backgroundImage=`url(${gif})`
+    })
 
+    
+});
 
 
 window.addEventListener('scroll',()=>{

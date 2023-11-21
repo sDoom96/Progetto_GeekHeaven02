@@ -1,9 +1,9 @@
 <div class="d-flex flex-column align-items-center justify-content-center {{-- align-items-start --}} mt-5 pt-5 col-4">
     <div class=" border-r border-1 rounded-4 card" style="width: 30rem;">
         <div class="img-card-container">
-            {{-- <div class="prova"></div> --}}
+            <div data-gif="{{Storage::url($game->gif)}}" class="prova div-gif"></div>
         <img src="{{Storage::url($game->img)}}" class="rounded-top-4 card-img-top "
-        alt="...">
+        alt="immagine gioco">
         </div>
 
         <div class="p-0 rounded-bottom-4 bg-gradient card-body">
