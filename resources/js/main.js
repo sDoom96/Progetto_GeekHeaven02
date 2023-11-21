@@ -3,8 +3,11 @@ let divGif = document.querySelectorAll('.div-gif')
 
 divGif.forEach(el => {
     let gif = el.getAttribute('data-gif');
-    el.addEventListener('hover',()=>{
+    el.addEventListener('mouseover',()=>{
         el.style.backgroundImage=`url(${gif})`
+    })
+    el.addEventListener('mouseleave',()=>{
+        el.style.backgroundImage=`none`
     })
 
     
