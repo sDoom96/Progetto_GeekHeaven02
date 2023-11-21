@@ -25,7 +25,8 @@ class GameRequest extends FormRequest
             'title' => 'required|max:255',
             'year' => 'required|max_digits:4',
             'develope' => 'required|max:255',
-            'description' => 'required|min:100|max:500'
+            'description' => 'required|min:100|max:500',
+            'category_id' => 'required'
         ];
     }
     public function messages(){
@@ -33,6 +34,7 @@ class GameRequest extends FormRequest
             'title.required' => 'Campo obbligatorio',
             'title.max' => 'massimo 255 caratteri',
             'year.required'=>'Campo Obbligatorio',
+            'category_id.required'=>'Campo Obbligatorio',
             'year.max_digits'=> "Il campo deve contenere l'anno di uscita del gioco",
             'description.required'=>'Campo obbligatorio',
             'description.min'=>'La descrizione deve contenere minimo 100 caratteri',

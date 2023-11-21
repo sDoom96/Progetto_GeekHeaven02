@@ -36,6 +36,7 @@ class GameController extends Controller
     public function store(GameRequest $request)
     {
         $file = $request->file('img');
+        $gif = $request->file('gif');
 
         Game::create([
             'title'=> $request->title,
@@ -44,6 +45,7 @@ class GameController extends Controller
             'description'=> $request->description,
 
             'img'=> $file ? $file->store('public/images') : 'public/images/default.png',
+            'gif'=> $gif ? $gif->store('public/gifs') : 'public/gifs/default.gif',
             'category_id'=> $request->category_id,
         ]);
         return redirect()->route('game.create')->with('success','gioco inserito con successo');
@@ -72,6 +74,7 @@ class GameController extends Controller
     public function update(GameRequest $request, Game $game)
     {
         $file = $request->file('img');
+        $gif = $request->file('gif');
         $game->update([
             'title'=>$request->title,
             'year'=> $request->year,
@@ -82,6 +85,11 @@ class GameController extends Controller
         if ($file){
             Storage::delete($game->img);
             $game->img = $file->store('/public/image');
+            $game->save();
+        }
+        if ($gif){
+            Storage::delete($game->gif);
+            $game->img = $file->store('/public/gif');
             $game->save();
         }
         return redirect()-> route("game.index", compact('game'))->with('success', ' il gioco è aggionrato con successo');

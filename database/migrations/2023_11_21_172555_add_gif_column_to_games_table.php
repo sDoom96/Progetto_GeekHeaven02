@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('games', function (Blueprint $table) {
-            $table->string('img')->after('description')->default('public/media/default.gif');
+            $table->string('gif')->after('img')->default('public/media/default.png');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('games', function (Blueprint $table) {
-            $table->dropColumn('img');
+            $table->dropColumn('gif');
         });
     }
 };

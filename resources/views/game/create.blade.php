@@ -29,7 +29,7 @@
                             Anno
                         </label>
                         <input type="number" class="form-control" id="year" name="year" value="{{old('year')}}">
-                        @error('title')
+                        @error('year')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
@@ -39,18 +39,21 @@
                             Casa di Sviluppo
                         </label>
                         <input type="text" class="form-control" id="develope" name="develope" value="{{old('develope')}}">
-                        @error('title')
+                        @error('develope')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
 
+                    {{-- DESCRIZIONE --}}
                     <div class="mb-3">
                         <label for="description" class="fs-4">Descrizione</label>
                         <textarea class="form-control" name="description" id="description" cols="30" rows="10">{{old('description')}}</textarea>
-                        @error('title')
+                        @error('description')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
+
+                    {{-- CATEGORIA --}}
                     <div class="mb-3 form-check">
                         <label for="category_id" class="form-label text-center">Categoria</label>
                         <select class="form-select" aria-label="Default select example" name="category_id" id="category_id">
@@ -59,13 +62,28 @@
                             <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
                         </select>
+                        @error('category_id')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
+
+                    {{-- IMMAGINE --}}
                     <div class="my-5 mb-3">
                         <label class="fs-4 form-label" for="img">
                             Inserisci l'immagine
                         </label>
                         <input type="file" name="img" id="img" class="fom-label form-control">
                     </div>
+
+                    {{-- GIF --}}
+                    <div class="my-5 mb-3">
+                        <label class="fs-4 form-label" for="gif">
+                            Inserisci la gif
+                        </label>
+                        <input type="file" name="gif" id="gif" class="fom-label form-control">
+                    </div>
+
+                    {{-- INVIO DATI --}}
                     <button type="submit" class="btn btn-primary">
                         Invia
                     </button>
